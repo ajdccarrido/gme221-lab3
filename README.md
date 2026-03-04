@@ -71,7 +71,8 @@ The coordinate structure of the LineString with a Z value is preserved. As seen 
 ```
 
 **2. What is lost or not formally expressed?**
-The Coordinate Reference System was not preserved.
+
+The Coordinate Reference System (CRS) is not formally preserved in standard GeoJSON. GeoJSON assumes WGS84 by default and does not explicitly store CRS metadata, so projection information may be lost if not documented separately.
 
 **3. Why does GeoJSON still label the geometry as "LineString" even when Z exists? What does this tell you about the difference between data content and data standard?**
 
